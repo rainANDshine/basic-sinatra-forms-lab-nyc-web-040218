@@ -8,7 +8,7 @@ class App < Sinatra::Base
 
   post '/newteam' do
     @newteam = []
-    @newteam << param[:name] << param[:coach] << param[:pg] << param[:sg] << param[:sf] << param[:pf] << param[:c]
+    @newteam << params[:name] << params[:coach] << params[:pg] << params[:sg] << params[:sf] << params[:pf] << params[:c]
     binding.pry
     erb :team
   end
